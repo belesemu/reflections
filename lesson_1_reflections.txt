@@ -1,0 +1,166 @@
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+well it willl help me to see the progress i made 
+to revord most commoblue occuring mistakes. and do something about it 
+if the update code didnt work i would have the opportunity to check back the last working version
+
+version conteol for coding feature 
+
+when to sacve : whe
+
+git @ unplesant person 
+svn git 
+git @ manual anyeditor use offline 
+
+commits @ user created checkpoint, each one 
+
+concept map 
+version control : systematic versioning a code(content)
+create acces and edit of content 
+git commit :(part of git )
+
+
+how 
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+pro @ give control over the whole process and commit onnly the desired changes 
+cons sometimes you might forget tto commit 
+
+multiple files we want to track together are called repository : files interconnected 
+
+git tracks the state of each files each time we commit (that is it saves the snap shot of the whole repository every time we chosee to commit 
+
+
+git log --stat : stata abot each commit affected the files 
+
+git diff the two id i want to compare 
+git clone name repository (creates the clone of the repository (the actual copy of the original repository ))
+
+
+
+How can you use the commands git log and git diff to view the history of files?
+git log gives all the snap shot of the commits by comparing snap shots from two time frames we can tell the differece between two versions of a given files 
+
+Git Errors and Warnings Solution
+Should not be doing an octopus
+Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.
+
+You are in 'detached HEAD' state
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened)
+This is a real error message, but it’s not output by Git. Instead it’s output by GHC, the compiler for a programming language called Haskell. It’s reserved for particularly surprising errors!
+
+
+Now that you have your workspace set up, what do you want to try using Git for? 
+
+
+
+
+
+
+Behavior of git clone
+If someone else gives you the location of their directory or repository, you can copy or clone it to your own computer.
+
+This is true for both copying a directory and cloning a repository.
+
+As you saw in the previous lesson, if you have a URL to a repository, you can copy it to your computer using git clone.
+
+For copying a directory, you weren't expected to know this, but it is possible to copy a directory from one computer to another using the command scp, which stands for "secure copy". The name was chosen because the scp command lets you securely copy a directory from one computer to another. 
+
+
+The history of changes to the directory or repository is copied.
+
+This is true for cloning a repository, but not for copying a directory. The main reason to use git clone rather than copying the directory is because git clone will also copy the commit history of the repository. However, copying can be done on any directory, whereas git clone only works on a Git repository. 
+
+
+If you make changes to the copied directory or cloned repository, the original will not change.
+
+This is true for both copying a directory and cloning a repository. In both cases, you're making a copy that you can alter without changing the original. 
+
+
+The state of every file in the directory or repository is copied.
+
+This is true for both copying a directory and cloning a repository. In both cases, all the files are copied.
+
+Behavior of git diff
+The middle commit, 06d72e, is the first commit with the mute button, so comparing that commit and the previous commit, 3d4d45, would show the changes that add the mute button.
+
+In order for the changes adding the mute button to be shown as additions, the commit with the mute button needs to be the second argument to git diff. That is because git diff considers the first argument as the "original", and the second argument as the "new" version, so additions are lines present in the second argument but not the first.
+
+Thus, the last command listed, git diff 3d4d45 06d72e, is correct, and would show the mute button lines as additions. Reversing the arguments and running git diff 06d72e 3d4d45 would instead show the mute button lines as deletions.
+
+git log output
+For reference, here is the git log output again:
+
+
+
+Behavior of git checkout
+Checking out an earlier commit will change the state of at least one file.
+
+This is sometimes true. Git doesn't allow you to save a new commit if no files have been updated, so you might think this is always true. However, it's possible to do the following:
+
+Save a commit (call this commit 1).
+Update some files and save another commit (call this commit 2).
+Change all the files back to their state during commit 1, then save again (call this commit 3).
+This sometimes happens if commit 2 contained a bug, and it's important to fix the bug quickly. The easiest thing to do might be to remove all the changes introduced by commit 2 to fix the bug, then figure out how to safely reintroduce the changes later.
+
+At this point, commit 3 is the latest commit, so if you checkout commit 1, none of the files will be changed. 
+
+
+Checking out an earlier commit will change the state of more than one file.
+
+Checking out an earlier commit will change the state of every file in the repository.
+
+Both of these are sometimes true. Since each commit tracks the state of all files in the repository, it is possible that checking out an earlier commit will change the state of multiple files, or even all the files in the repository. However, it is possible to save a new commit after changing only one file, so it is possible only one file will change. 
+
+
+After checking out a commit, the state of all the files in the repository will be from the same point in time.
+
+This is always true. A commit saves a snapshot of all files in the repository at the time the commit was made, so checking out an earlier commit will result in all the files being reverted to their state at the time the commit was made. That is, the files will be in a consistent state.
+using it for code 
+
+
+Git command review
+Compare two commits, printing each line that is present in one commit but not the other.
+
+git diff will do this. It takes two arguments - the two commit ids to compare. 
+
+
+Make a copy of an entire Git repository, including the history, onto your own computer.
+
+git clone will do this. It takes one argument - the url of the repository to copy. 
+
+
+Temporarily reset all files in a directory to their state at the time of a specific commit.
+
+git checkout will do this. It takes one argument - the commit ID to restore. 
+
+
+Show the commits made in this repository, starting with the most recent.
+
+git log will do this. It doesn't take any arguments.
+
+
+
+lesson 3 reflections 
+What happens when you initialize a repository? Why do you need to do it?
+
+it will initialixze the new repositort with all the neccessery iniyial parameters 
+
+What happens when you initialize a repository? Why do you need to do it?
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+How do the diagrams help you visualize the branch structure?
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?
