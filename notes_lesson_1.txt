@@ -1,0 +1,42 @@
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+because mostly the git files are codes and thet are corelated to each other whearas in google docs they are separate files so they dont need saving multiple files together 
+
+for bigger tasks 
+
+
+Getting Colored Output
+To get colored diff output, run
+ git config --global color.ui auto
+
+Using git log and git diff
+As a reminder, running git log will show a list of the recent commits with information about them, including commit IDs. Running git diff followed by two commit IDs will compare the two versions of the code in those commits.
+
+Entering commit IDs
+If it is easier, you may enter the first four or more characters of the commit ID rather than pasting the entire ID
+
+Exiting git log
+To stop viewing git log output, press q (which stands for quit).
+
+Git diff :to find the changes introduced by a commit, you need to compare that commit to the previous commit,
+
+
+You can download the troubleshooting_guide.pdf here.
+
+QuickEdit Mode
+To make copying and pasting in GitBash easier by turning on QuickEdit mode, follow the instructions here.
+
+Most Recent Commit
+The commit ID of the most recent commit is 3884eab839af1e82c44267484cf2945a766081f3. You can use this commit ID to return to the latest commit after checking out an older commit.
+
+Format of git checkout
+The command Caroline types to checkout the "Revert controls" commit is git checkout b0678b161fcf74467ed3a63110557e3d6229cfa6.
+
+Windows Explorer
+When Caroline mentions opening a "file navigation GUI" on Windows, she is referring to the Windows Explorer.
+
+Entering commit IDs
+If it is easier, you may enter the first four or more characters of the commit ID rather than pasting the entire ID.
+
+Most Recent Commit
+The commit ID of the most recent commit is 3884eab839af1e82c44267484cf2945a766081f3. You can use this commit ID to return to the latest commit after checking out an older commit.
